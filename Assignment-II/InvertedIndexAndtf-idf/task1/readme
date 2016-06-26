@@ -1,0 +1,14 @@
+Program to produce an inverted index.  For example, given the following documents: 
+	d1.txt: cat dog cat fox
+	d2.txt: cat bear cat cat fox
+	d3.txt: fox wolf dog
+
+output should be following full inverted index.
+
+	bear: 1 : {(d2.txt,1)}
+	cat : 2 : {(d1.txt, 2), (d2.txt, 3)}
+	dog : 2 : {(d1.txt, 1), (d3.txt, 1)}
+	fox : 3 : {(d1.txt, 1), (d2.txt, 1), (d3.txt, 1)}
+	wolf: 1 : {(d2.txt,1)}
+
+For each term (word), there is a single record consisting of a number and a list of what are termed postings; the semicolon character (‘:’) is used to delimit the fields of each record. The first field is a number that represents the number of documents that contain the term. Then a list of postings follows where each posting is a pair consisting of the document name and the frequency of the word in that specific document.
