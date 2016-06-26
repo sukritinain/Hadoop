@@ -1,0 +1,1 @@
+Program that takes a large web file and produces a version which is all lower-case. For example, the sentence John loves Mary. would become john loves mary.
